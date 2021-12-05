@@ -10,7 +10,7 @@ async function validRecommendation({ name, link }) {
     const result = await recommendRepository.addRecommendation({ name, link });
     return (result);
   } catch (error) {
-    return 501;
+    return 500;
   }
 }
 

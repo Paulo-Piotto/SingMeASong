@@ -8,7 +8,7 @@ async function addRecommendation({ name, link }) {
     }
     await connection.query('INSERT INTO recommendations (name,link,score) VALUES ($1,$2,$3)', [name, link, 1]);
   } catch (error) {
-    return 502;
+    return 500;
   }
   return 200;
 }
