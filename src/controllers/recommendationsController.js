@@ -14,6 +14,19 @@ async function topAmount(req, res) {
   }
 }
 
+async function randomMusic(req, res) {
+  try {
+    const result = await recommendationsService.randomMusicService();
+    if (result.status) {
+      res.sendStatus(result.status);
+    }
+    res.send(result.value);
+  } catch (error) {
+    res.sendStatus(500);
+  }
+}
+
 export {
   topAmount,
+  randomMusic,
 };
