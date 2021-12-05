@@ -16,6 +16,10 @@
             {
                 "js": "ignorePackages"
             }
-           ]
+           ],
+           "prefer-regex-literals": "off",
+           "no-useless-escape": "off",
+           "no-invalid-regexp": "off",
+           "import/prefer-default-export": "off"
     }
 }
